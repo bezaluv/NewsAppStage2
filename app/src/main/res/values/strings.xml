@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">NewsAppStage2</string>
+
+    <!-- news_article layout tools -->
+    <string name="tools_title_of_article">This is just a really long Title of the Article, so I can see how it looks</string>
+    <string name="tools_date_of_article">1 day ago</string>
+    <string name="tools_author_of_article">By Filmon Tek</string>
+
+    <!-- Error Messages -->
+    <string name="no_internet">No internet connectivity. Connect to the internet and swipe down to refresh.</string>
+    <string name="no_articles_found">No news articles found. You can swipe down to try and refresh.</string>
+
+    <!-- Time strings -->
+    <string name="time_seconds_ago">seconds ago</string>
+    <string name="time_minute_ago">minute ago</string>
+    <string name="time_minutes_ago">minutes ago</string>
+    <string name="time_hour_ago">hour ago</string>
+    <string name="time_hours_ago">hours ago</string>
+    <string name="time_day_ago">day ago</string>
+
+    <!-- Title strings -->
+    <string name="title_games">Games</string>
+    <string name="title_sports">Sports</string>
+    <string name="title_culture">Culture</string>
+    <string name="title_politics">Politics</string>
+    <string name="title_books">Books</string>
+    <string name="title_technology">Technology</string>
+    <string name="title_news">News</string>
+
+    <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
+    <string name="settings_menu_item">Settings</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">NewsAppStage2Settings</string>
+
+    <!-- Order By preference: contains Newest, Oldest, and Relevance -->
+    <string name="order_by_title">Order By</string>
+    <string name="order_by_key" translatable="false">order_by</string>
+    <string name="order_by_default" translatable="false">@string/order_by_newest_value</string>
+    <string name="articles_displayed" translatable="false">Articles_Displayed</string>
+    <string name="articles_displayed_by_default" translatable="false">10</string>
+
+    <string name="order_by_newest_title">Newest</string>
+    <string name="order_by_newest_value" translatable="false">newest</string>
+
+    <string name="order_by_oldest_title">Oldest</string>
+    <string name="order_by_oldest_value" translatable="false">oldest</string>
+
+    <string name="order_by_relevance_title">Relevance</string>
+    <string name="order_by_relevance_value" translatable="false">relevance</string>
+
+    <!-- Page Size preference: 10 articles displayed by default -->
+    <string name="page_size_title">Articles Displayed</string>
+    <string name="page_size_key" translatable="false">page_size</string>
+    <string name="page_size_default" translatable="false">10</string>
+
+    <!-- Keyword preference: -->
+    <string name="keyword_title">Keyword</string>
+    <string name="keyword_key" translatable="false">keyword</string>
+    <string name="keyword_default" translatable="false">keyword</string>
+</resources>
