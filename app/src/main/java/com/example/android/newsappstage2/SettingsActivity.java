@@ -29,13 +29,13 @@ public class SettingsActivity extends AppCompatActivity {
             addPreferencesFromResource(R.xml.settings_main);
 
             // Finds reference to Order By, Articles Displayed, and Keyword
-            Preference orderBy = findPreference(getString(R.string.order_by_key));
+            Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
             bindPreferenceSummaryToValue(orderBy);
 
-            Preference pageSize = findPreference(getString(R.string.page_size_key));
+            Preference pageSize = findPreference(getString(R.string.settings_page_size_key));
             bindPreferenceSummaryToValue(pageSize);
 
-            Preference keyword = findPreference(getString(R.string.keyword_key));
+            Preference keyword = findPreference(getString(R.string.settings_keyword_key));
             bindPreferenceSummaryToValue(keyword);
         }
 
