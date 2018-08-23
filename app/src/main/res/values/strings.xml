@@ -33,11 +33,9 @@
     <string name="settings_title">NewsAppStage2Settings</string>
 
     <!-- Order By preference: contains Newest, Oldest, and Relevance -->
-    <string name="order_by_title">Order By</string>
-    <string name="order_by_key" translatable="false">order_by</string>
-    <string name="order_by_default" translatable="false">@string/order_by_newest_value</string>
-    <string name="articles_displayed" translatable="false">Articles_Displayed</string>
-    <string name="articles_displayed_by_default" translatable="false">10</string>
+    <string name="settings_order_by_title">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/order_by_newest_value</string>
 
     <string name="order_by_newest_title">Newest</string>
     <string name="order_by_newest_value" translatable="false">newest</string>
@@ -49,12 +47,18 @@
     <string name="order_by_relevance_value" translatable="false">relevance</string>
 
     <!-- Page Size preference: 10 articles displayed by default -->
-    <string name="page_size_title">Articles Displayed</string>
-    <string name="page_size_key" translatable="false">page_size</string>
-    <string name="page_size_default" translatable="false">10</string>
+    <string name="settings_page_size_title">Articles Displayed</string>
+    <string name="settings_page_size_key" translatable="false">page_size</string>
+    <string name="settings_page_size_default" translatable="false">10</string>
+    <string name="settings_games">Games</string>
+    <string name="settings_sports">Sports</string>
+    <string name="settings_culture">Culture</string>
+    <string name="settings_politics">Politics</string>
+    <string name="settings_books">Books</string>
+    <string name="settings_technology">Technology</string>
 
     <!-- Keyword preference: -->
-    <string name="keyword_title">Keyword</string>
-    <string name="keyword_key" translatable="false">keyword</string>
-    <string name="keyword_default" translatable="false">keyword</string>
+    <string name="settings_keyword_title">Keyword</string>
+    <string name="settings_keyword_key" translatable="false">keyword</string>
+    <string name="settings_keyword_default" translatable="false">keyword</string>
 </resources>

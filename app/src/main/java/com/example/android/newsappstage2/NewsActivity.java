@@ -4,6 +4,7 @@ package com.example.android.newsappstage2;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,11 +26,15 @@ public class NewsActivity extends AppCompatActivity {
         // Find the view pager
         ViewPager viewPager = findViewById(R.id.view_pager);
 
+        // shared preferences
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         // Create an adapter that knows which fragment should be shown on each page
         NewsActivityPagerAdapter adapter = new com.example.android.newsappstage2.NewsActivityPagerAdapter(getSupportFragmentManager(),sharedPrefs, this);
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
+
 
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = findViewById(R.id.tab_layout);
@@ -55,8 +60,8 @@ public class NewsActivity extends AppCompatActivity {
         // sets the current tab back to what the user was on before they left for the settings
         // without this the app would go back to the first tab when you refresh.
         TabLayout.Tab tab = tabLayout.getTabAt(sharedPrefs.getInt(SELECTED_TAB,0));
-        assert tab != null;
         tab.select();
+
     }
 
     @Override
