@@ -44,36 +44,40 @@ public class NewsActivityPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
+        String orderby = sharedPrefs.getString(context.getString(R.string.settings_order_by_key),context.getString(R.string.settings_order_by_default));
+        String pageSize = sharedPrefs.getString(context.getString(R.string.settings_page_size_key),context.getString(R.string.settings_page_size_default));
+        String keyword = sharedPrefs.getString(context.getString(R.string.settings_keyword_key),context.getString(R.string.settings_keyword_default));
+
         Bundle bundle = new Bundle();
 
         switch (position) {
             case 0:
                 // Games
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_GAMES));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_GAMES, orderby, pageSize, keyword));
                 break;
             case 1:
                 // Sports
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_SPORTS));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_SPORTS, orderby, pageSize, keyword));
                 break;
             case 2:
                 // Culture
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_CULTURE));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_CULTURE, orderby, pageSize, keyword));
                 break;
             case 3:
                 // Politics
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_POLITICS));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_POLITICS, orderby, pageSize, keyword));
                 break;
             case 4:
                 // Books
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_BOOKS));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_BOOKS, orderby, pageSize, keyword));
                 break;
             case 5:
                 // Technology
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_TECHNOLOGY));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(GuardianUrlBuilder.SECTION_TECHNOLOGY, orderby, pageSize, keyword));
                 break;
             default:
                 // News
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(null));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(null,null, null, null));
         }
 
         // Attach the bundle to the fragment and return that
