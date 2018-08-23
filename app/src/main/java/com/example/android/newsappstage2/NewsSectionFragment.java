@@ -32,7 +32,7 @@ public class NewsSectionFragment extends Fragment implements LoaderManager.Loade
     // Empty text view
     TextView emptyTextView;
     // Guardian API URL for articles, set it to a default if no section is chosen
-    private String guardian_url = GuardianUrlBuilder.buildUrl(null,null,null,null);
+    private String guardian_url = GuardianUrlBuilder.buildUrl(null, null, null, null);
 
     // Required empty constructor
     public NewsSectionFragment() {

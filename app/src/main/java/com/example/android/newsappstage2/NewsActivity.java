@@ -30,7 +30,7 @@ public class NewsActivity extends AppCompatActivity {
         sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         // Create an adapter that knows which fragment should be shown on each page
-        NewsActivityPagerAdapter adapter = new com.example.android.newsappstage2.NewsActivityPagerAdapter(getSupportFragmentManager(),sharedPrefs, this);
+        NewsActivityPagerAdapter adapter = new com.example.android.newsappstage2.NewsActivityPagerAdapter(getSupportFragmentManager(), sharedPrefs, this);
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
@@ -59,7 +59,7 @@ public class NewsActivity extends AppCompatActivity {
 
         // sets the current tab back to what the user was on before they left for the settings
         // without this the app would go back to the first tab when you refresh.
-        TabLayout.Tab tab = tabLayout.getTabAt(sharedPrefs.getInt(SELECTED_TAB,0));
+        TabLayout.Tab tab = tabLayout.getTabAt(sharedPrefs.getInt(SELECTED_TAB, 0));
         tab.select();
 
     }

@@ -44,9 +44,9 @@ public class NewsActivityPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        String orderby = sharedPrefs.getString(context.getString(R.string.settings_order_by_key),context.getString(R.string.settings_order_by_default));
-        String pageSize = sharedPrefs.getString(context.getString(R.string.settings_page_size_key),context.getString(R.string.settings_page_size_default));
-        String keyword = sharedPrefs.getString(context.getString(R.string.settings_keyword_key),context.getString(R.string.settings_keyword_default));
+        String orderby = sharedPrefs.getString(context.getString(R.string.settings_order_by_key), context.getString(R.string.settings_order_by_default));
+        String pageSize = sharedPrefs.getString(context.getString(R.string.settings_page_size_key), context.getString(R.string.settings_page_size_default));
+        String keyword = sharedPrefs.getString(context.getString(R.string.settings_keyword_key), context.getString(R.string.settings_keyword_default));
 
         Bundle bundle = new Bundle();
 
@@ -77,7 +77,7 @@ public class NewsActivityPagerAdapter extends FragmentPagerAdapter {
                 break;
             default:
                 // News
-                bundle.putString("url", GuardianUrlBuilder.buildUrl(null,null, null, null));
+                bundle.putString("url", GuardianUrlBuilder.buildUrl(null, null, null, null));
         }
 
         // Attach the bundle to the fragment and return that

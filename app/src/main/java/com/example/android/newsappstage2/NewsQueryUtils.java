@@ -86,8 +86,8 @@ public final class NewsQueryUtils {
      * @throws IOException if there's an IO Exception
      */
     private static String makeHttpRequest(URL url) throws IOException {
+
         // Set the response by default to be empty
-        Log.i(LOG_TAG,"url: " + url);
         String jsonResponse = "";
 
         // If the url is null return early
