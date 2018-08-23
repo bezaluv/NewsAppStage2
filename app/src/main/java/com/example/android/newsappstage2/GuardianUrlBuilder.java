@@ -3,15 +3,6 @@ package com.example.android.newsappstage2;
 import android.support.annotation.Nullable;
 
 public final class GuardianUrlBuilder {
-
-
-    // Sections
-    public static final String SECTION_GAMES = "&section=games",
-            SECTION_SPORTS = "&section=sport",
-            SECTION_CULTURE = "&section=culture",
-            SECTION_POLITICS = "&section=politics",
-            SECTION_BOOKS = "&section=books",
-            SECTION_TECHNOLOGY = "&section=technology";
     private static final String LOG_TAG = GuardianUrlBuilder.class.getSimpleName();
 
     // empty constructor.
@@ -19,15 +10,20 @@ public final class GuardianUrlBuilder {
     }
 
     // strings for the sections that will be in each tab. these are constants.
-    private static final String SHOW_FIELDS = "show-fields=thumbnail,byline";
+    private static final String SHOW_FIELDS = "&show-fields=thumbnail,byline";
     private static final String ORDERBY_PREFIX = "&order-by=";
-    private static final String PAGE_SIZE_PREFIX = "&page-size=";
-    private static final String KEYWORD_PREFIX = "$keyword";
-
+    private static final String PAGE_SIZE_PREFIX = "&page-size= ";
+    private static final String KEYWORD_PREFIX = "&keyword";
+    public static final String SECTION_GAMES = "games?";
+    public static final String SECTION_SPORTS = "sports?";
+    public static final String SECTION_CULTURE = "culture?";
+    public static final String SECTION_POLITICS = "politics?";
+    public static final String SECTION_BOOKS = "books?";
+    public static final String SECTION_TECHNOLOGY= "technology?";
 
 
     // Base of URL
-    private static final String URL_BASE = " https://content.guardianapis.com/";
+    private static final String URL_BASE = "https://content.guardianapis.com/search?";
     // API Key for Guardian
     private static final String URL_API_KEY = "&api-key=2c69e5a3-208c-4e7c-ada4-44e284bc77c9";
 
