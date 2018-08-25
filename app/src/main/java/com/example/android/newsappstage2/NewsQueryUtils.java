@@ -100,8 +100,8 @@ public final class NewsQueryUtils {
         try {
             // Set up the type of connection and attempt connecting
             httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.setReadTimeout(10000);
-            httpURLConnection.setConnectTimeout(15000);
+            httpURLConnection.setReadTimeout(10000 /* milliseconds */);
+            httpURLConnection.setConnectTimeout(15000 /* milliseconds */);
             httpURLConnection.setRequestMethod("GET");
             httpURLConnection.connect();
 
@@ -154,13 +154,23 @@ public final class NewsQueryUtils {
                 String webTitle = jsonObjectResultPosition.getString("webTitle");
                 String webUrl = jsonObjectResultPosition.getString("webUrl");
 
-                JSONObject jsonObjectFields = jsonObjectResultPosition.getJSONObject("fields");
 
-                String byLine = jsonObjectFields.optString("byline");
-                String thumbnail = jsonObjectFields.optString("thumbnail");
+                String byLine = jsonObjectResultPosition.optString("byline");
+                String thumbnail = jsonObjectResponse.optString("thumbnail");
+                if (!jsonObjectResultPosition.isNull("fields")){
+                    JSONObject fields  = jsonObjectResultPosition.getJSONObject("fields");
+                    if (fields!=null){
+                        if (fields.has(byLine)){
+                            byLine = fields.getString("byline");
+                        }
+                        if (fields.has("thumbnail") && !TextUtils.isEmpty(fields.getString("thumbnail"))){
+                            thumbnail =fields.getString("thumbnail");
+                        }
+                    }
+                }
 
                 // Add a new NewsArticle from the data
-                newsArticles.add(new NewsArticle(webPublicationDate, webTitle, webUrl, byLine, downloadBitmap(thumbnail)));
+                newsArticles.add(new NewsArticle(webPublicationDate, webTitle, webUrl,byLine, downloadBitmap(thumbnail)));
             }
         } catch (JSONException e) {
             Log.e(LOG_TAG, "Problem parsing the JSON results", e);

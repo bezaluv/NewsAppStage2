@@ -19,6 +19,7 @@ public class NewsArticle {
     // Bitmap of the thumbnail of the article
     private Bitmap thumbnail;
 
+
     /**
      * Constructs a new {@link NewsArticle} object
      *

@@ -16,7 +16,7 @@ public final class GuardianUrlBuilder {
     private static final String PAGE_SIZE_PREFIX = "&page-size=";
     private static final String KEYWORD_PREFIX = "&keyword=";
     public static final String SECTION_GAMES = "section=games";
-    public static final String SECTION_SPORTS = "section=sports";
+    public static final String SECTION_SPORTS = "section=sport";
     public static final String SECTION_CULTURE = "section=culture";
     public static final String SECTION_POLITICS = "section=politics";
     public static final String SECTION_BOOKS = "section=books";
